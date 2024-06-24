@@ -25,12 +25,35 @@
                         {{ $program->program_th }}
                     </div>
                 </div>
+
                 <div class="col-xs-12 col-sm-12 col-md-12 mt-2">
                     <div class="form-group">
                         <strong>Program EN:</strong> <br/>
                         {{ $program->program_en }}
                     </div>
                 </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2">
+                    <div class="form-group">
+                        <strong>Grade Year:</strong> <br/>
+                        {{ $program->grad_year }}
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2">
+                    <div class="form-group">
+                        <strong>Faculty TH:</strong> <br/>
+                        {{ $program->faculty->faculty_th }}
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2">
+                    <div class="form-group">
+                        <strong>Faculty EN:</strong> <br/>
+                        {{ $program->faculty->faculty_en }}
+                    </div>
+                </div>
+
             </div>    
 
     </div>
