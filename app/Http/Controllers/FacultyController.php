@@ -10,8 +10,8 @@ class FacultyController extends Controller
 {
     public function index()
     {
-        $facultys = Faculty::orderBy('id', 'DESC')->paginate(10);
-        return view('faculty.index', compact('facultys'));
+        $faculties = Faculty::orderBy('id', 'DESC')->paginate(10);
+        return view('faculty.index', compact('faculties'));
     }
 
     public function create()
