@@ -29,7 +29,7 @@
                     </thead>
 
                     <tbody>
-                        @forelse ($facultys as $item)
+                        @forelse ($faculties as $item)
                             <tr>
                                 <td class="border-b">{{ $item->id }}</td>
                                 <td class="border-b">{{ $item->faculty_th }}</td>
