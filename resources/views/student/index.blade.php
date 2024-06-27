@@ -25,6 +25,7 @@
                             <th class="border-b">SID</th>
                             <th class="border-b">First name</th>
                             <th class="border-b">Last name</th>
+                            <th class="border-b">Grade Year</th>
                             <th class="border-b">Program TH</th>
                             <th class="border-b">Program EN</th>
                             <th class="border-b">Action</th>
@@ -38,6 +39,7 @@
                                 <td class="border-b">{{ $item->sid }}</td>
                                 <td class="border-b">{{ $item->fname }}</td>
                                 <td class="border-b">{{ $item->lname }}</td>
+                                <td class="border-b">{{ $item->program->grad_year }}</td>
                                 <td class="border-b">{{ $item->program->program_th }}</td>
                                 <td class="border-b">{{ $item->program->program_en }}</td>
                                 <td class="border-b">
