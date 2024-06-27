@@ -16,8 +16,8 @@ class ProgramController extends Controller
 
     public function create()
     {
-        $facultys = Faculty::all();
-        return view('program.create', compact('facultys'));
+        $faculties = Faculty::all();
+        return view('program.create', compact('faculties'));
     }
 
     public function store(Request $request)
