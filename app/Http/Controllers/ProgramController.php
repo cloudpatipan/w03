@@ -41,8 +41,8 @@ class ProgramController extends Controller
 
     public function edit(Program $program)
     {
-        $facultys = Faculty::all();
-        return view('program.edit', compact('program', 'facultys'));
+        $faculties = Faculty::all();
+        return view('program.edit', compact('program', 'faculties'));
     }
 
     public function update(Request $request, Program $program)
