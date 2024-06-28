@@ -56,7 +56,7 @@
                 </table>
             </div>
 
-            {!! $facultys->links() !!}
+            {!! $faculties->links() !!}
 
         </div>
     </div>
