@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="card mt-5 w-[80%] mx-auto">
+    <div >
         <h2 class="card-header text-center font-semibold">Student Edit</h2>
         <div class="card-body">
 

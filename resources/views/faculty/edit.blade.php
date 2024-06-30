@@ -6,7 +6,7 @@
 
 @section('content')
 
-<div class="card mt-5 w-[80%] mx-auto">
+<div >
     <h2 class="card-header text-center font-semibold">Faculty Edit</h2>
     <div class="card-body">
         
@@ -22,8 +22,6 @@
         <form class="my-4" action="{{ route('faculty.update', $faculty->id) }}" method="POST" enctype="multipart/form-data">
             @csrf   
             @method('PUT')
-                @csrf
-                @method('PUT')
                 <div class="mb-3">
                     <label class="form-label block"><strong>Faculty TH:</strong></label>
                     <input 

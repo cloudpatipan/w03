@@ -1,20 +1,20 @@
 @extends('layouts.app')
 
 @section('title')
-    Vaccine
+    Vaccine Record
 @endsection
 
 @section('content')
     <div >
-        <h2 class="card-header text-center font-semibold">Vaccine Edit</h2>
+        <h2 class="card-header text-center font-semibold">Vaccine Record</h2>
         <div class="card-body">
-            
+
             @if (session('success'))
                 <div class="border p-4 rounded-lg mt-4" role="alert">{{ session('success') }}</div>
             @endif
 
             <button class="border rounded-lg p-4 mt-4">
-                <a href="{{ route('vaccine.create') }}"><i class="fa fa-plus"></i> Create New item</a>
+                <a href="{{ route('vaccine_record.create') }}"><i class="fa fa-plus"></i> Create New item</a>
             </button>
 
             <div class="rounded-lg border my-4 p-4">
@@ -22,21 +22,27 @@
                     <thead>
                         <tr class="text-left">
                             <th class="border-b">No</th>
+                            <th class="border-b">First Name</th>
+                            <th class="border-b">Last Name</th>
                             <th class="border-b">Vaccine</th>
+                            <th class="border-b">Vaccine Date</th>
                             <th class="border-b">Action</th>
                         </tr>
                     </thead>
 
                     <tbody>
-                        @forelse ($vaccines as $item)
+                        @forelse ($vaccine_records as $item)
                             <tr>
                                 <td class="border-b">{{ $item->id }}</td>
-                                <td class="border-b">{{ $item->vaccine }}</td>
+                                <td class="border-b">{{ $item->student->fname }}</td>
+                                <td class="border-b">{{ $item->student->lname }}</td>
+                                <td class="border-b">{{ $item->vaccine->vaccine }}</td>
+                                <td class="border-b">{{ $item->vaccined_date }}</td>
                                 <td class="border-b">
-                                    <form action="{{ route('vaccine.destroy', $item->id) }}" method="POST">
-                                        <a class="border rounded-lg px-2" href="{{ route('vaccine.show', $item->id) }}"><i
+                                    <form action="{{ route('vaccine_record.destroy', $item->id) }}" method="POST">
+                                        <a class="border rounded-lg px-2" href="{{ route('vaccine_record.show', $item->id) }}"><i
                                                 class="fa-solid fa-list"></i> Show</a>
-                                        <a class="border rounded-lg px-2" href="{{ route('vaccine.edit', $item->id) }}"><i
+                                        <a class="border rounded-lg px-2" href="{{ route('vaccine_record.edit', $item->id) }}"><i
                                                 class="fa-solid fa-pen-to-square"></i> Edit</a>
                                         @csrf
                                         @method('DELETE')
@@ -54,7 +60,7 @@
                 </table>
             </div>
 
-            {!! $vaccines->links() !!}
+            {!! $vaccine_records->links() !!}
 
         </div>
     </div>

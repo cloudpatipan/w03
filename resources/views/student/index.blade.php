@@ -5,12 +5,12 @@
 @endsection
 
 @section('content')
-    <div class="card mt-5 w-[80%] mx-auto">
+    <div >
         <h2 class="card-header text-center font-semibold">Student</h2>
         <div class="card-body">
 
             @if (session('success'))
-                <div class="alert alert-success" role="alert">{{ session('success') }}</div>
+                <div class="border p-4 rounded-lg mt-4" role="alert">{{ session('success') }}</div>
             @endif
 
             <button class="border rounded-lg p-4 mt-4">

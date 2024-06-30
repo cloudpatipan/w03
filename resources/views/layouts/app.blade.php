@@ -17,7 +17,9 @@
 </style>
 
 <body>
-
-        @yield('content')
+    <div class="card mt-5 w-[80%] mx-auto">
+    @include('menu')
+    @yield('content')
+    </div>
 </body>
 </html>
