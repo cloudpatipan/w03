@@ -26,7 +26,7 @@
                     <select name="std_id" class="border rounded-lg">
                         <option disabled selected>-- เลือกนักเรียน --</option>
                         @foreach ($students as $student)                       
-                        <option value="{{ $student->id }} {{ ($student->id == $vaccine_record->std_id) ? 'selected' : '' }}">{{ $student->fname . ' ' . $student->lname }}</option>
+                        <option value="{{ $student->id }}" {{ ($student->id == $vaccine_record->std_id) ? 'selected' : '' }}>{{ $student->fname . ' ' . $student->lname }}</option>
                         @endforeach
                     </select>
                     @error('std_id')
@@ -39,7 +39,7 @@
                     <div class="grid grid-cols-2">
                         @foreach ($vaccines as $vaccine)
                             <div>
-                                <input class="accent-black" type="radio" name="vac_id" value="{{ $vaccine->id }} {{ ($vaccine->id == $vaccine_record->vac_id) ? 'checked' : '' }}">
+                                <input class="accent-black" type="radio" name="vac_id" value="{{ $vaccine->id }}" {{ ($vaccine->id == $vaccine_record->vac_id) ? 'checked' : '' }}>
                                 {{ $vaccine->vaccine }}
                             </div>
                         @endforeach
