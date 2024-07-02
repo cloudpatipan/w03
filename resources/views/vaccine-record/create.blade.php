@@ -54,7 +54,6 @@
                     <input type="date" name="vaccined_date"
                         class="border px-2 rounded-lg @error('vaccined_date') is-invalid @enderror" id="inputName"
                         placeholder="Vaccine Date"
-                        value="{{ $vaccine_record->vaccined_date }}"
                         >
                     @error('vaccined_date')
                         <div class="form-text text-red-700">{{ $message }}</div>
