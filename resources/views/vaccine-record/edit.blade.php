@@ -19,7 +19,7 @@
 
             <form class="my-4" action="{{ route('vaccine-record.update', $vaccine_record->id) }}" method="POST">
                 @csrf
-
+                @method('PUT')
                 
                 <div class="mb-3">
                     <label class="form-label block"><strong>Student:</strong></label>
@@ -39,7 +39,7 @@
                     <div class="grid grid-cols-2">
                         @foreach ($vaccines as $vaccine)
                             <div>
-                                <input class="accent-black" type="radio" name="vac_id" value="{{ $vaccine->id }}">
+                                <input class="accent-black" type="radio" name="vac_id" value="{{ $vaccine->id }} {{ ($vaccine->id == $vaccine_record->vac_id) ? 'checked' : '' }}">
                                 {{ $vaccine->vaccine }}
                             </div>
                         @endforeach
