@@ -64,7 +64,7 @@
                 <div class="mb-3">
                 <label class="form-label block"><strong>Faculty:</strong></label>
                 <div class="grid grid-cols-2">
-                    @foreach($facultys as $item)
+                    @foreach($faculties as $item)
                     <div>
                     <input class="accent-black" type="radio" name="prg_fac_id" value="{{ $item->id }}">
                     {{ $item->faculty_th }}
