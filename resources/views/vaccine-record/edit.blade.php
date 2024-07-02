@@ -26,7 +26,7 @@
                     <select name="std_id" class="border rounded-lg">
                         <option disabled selected>-- เลือกนักเรียน --</option>
                         @foreach ($students as $student)                       
-                        <option value="{{ $student->id }} {{ ($studen->id == $vaccine_record->std_id) ? 'selected' : '' }}">{{ $student->fname . ' ' . $student->lname }}</option>
+                        <option value="{{ $student->id }} {{ ($student->id == $vaccine_record->std_id) ? 'selected' : '' }}">{{ $student->fname . ' ' . $student->lname }}</option>
                         @endforeach
                     </select>
                     @error('std_id')
