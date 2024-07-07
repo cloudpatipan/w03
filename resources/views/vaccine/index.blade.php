@@ -6,7 +6,7 @@
 
 @section('content')
     <div >
-        <h2 class="card-header text-center font-semibold">Vaccine Edit</h2>
+        <h2 class="card-header text-center font-semibold">Vaccine</h2>
         <div class="card-body">
             
             @if (session('success'))
